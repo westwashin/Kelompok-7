@@ -1,0 +1,7 @@
+if=upami
+print=nyitak
+then=satuluyna
+else=nusanes
+for=pikeun
+to=ka
+arrow=jamparing

@@ -1,4 +1,4 @@
 # Kelompok-7
--Syuja Zhafran R.K
--Luthfi Ilham A.P
--Suntoro Wicaksono
+1. Syuja Zhafran R.K
+2. Luthfi Ilham A.P
+3. Suntoro Wicaksono

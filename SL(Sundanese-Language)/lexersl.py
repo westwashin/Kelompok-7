@@ -46,3 +46,5 @@ if __name__ == '__main__':
             lex = lexer.tokenize(text)
             for token in lex:
                 print(token)
+
+#akuaku

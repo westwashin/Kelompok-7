@@ -1,9 +1,9 @@
 from sly import Lexer
-
+#dyrect lyblery dari laxer  
 class Dasar(Lexer):
     tokens = { NAME, NUMBER, STRING, IF, PRINT, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
     ignore = '\t '
-
+    #menentukan token yang akan di ganti
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
 
     # Define tokens
@@ -22,7 +22,7 @@ class Dasar(Lexer):
 
     @_(r'\d+')
     def NUMBER(self, t):
-        t.value = int(t.value)
+        t.value = int(t.value) #untuk memanggil hasil t.value
         return t
 
     @_(r'#.*')

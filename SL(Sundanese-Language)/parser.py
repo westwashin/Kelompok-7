@@ -1,10 +1,9 @@
 from sly import Parser
-
-import rhs_lexer
-
+#untuk dyrect lyblary parser import rhs_lexer
+#untuk mengambil token dari laxer
 class BasicParser(Parser):
     tokens = rhs_lexer.BasicLexer.tokens
-
+    
     precedence = (
         ('left', '+', '-'),
         ('left', '*', '/'),

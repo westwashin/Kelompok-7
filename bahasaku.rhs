@@ -1,0 +1,16 @@
+a=2
+b=1
+y="Betul"
+n="Salah"
+UPAMI a+b==3 SATULUYNA NYITAK y NUSANES NYITAK n
+
+PIKEUN c=0 KA 5 SATULUYNA b+c
+
+h= "Hello Word"
+NYITAK h
+
+PIKEUN i=0 OT 5 SATULUYNA NYITAK i
+
+NYITAK a/b 
+
+#EDIT YOUR CODE HERE

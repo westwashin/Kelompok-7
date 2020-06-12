@@ -1,9 +1,9 @@
 from sly import Parser
 
-import rhs_lexer
+import sunda_lexer
 
 class BasicParser(Parser):
-    tokens = rhs_lexer.BasicLexer.tokens
+    tokens = sunda_lexer.BasicLexer.tokens
 
     precedence = (
         ('left', '+', '-'),
@@ -90,7 +90,7 @@ class BasicParser(Parser):
         return ('print', p.STRING)
 
 if __name__ == '__main__':
-    lexer = rhs_lexer.BasicLexer()
+    lexer = sunda_lexer.BasicLexer()
     parser = BasicParser()
     env = {}
     while True:

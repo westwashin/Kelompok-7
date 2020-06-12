@@ -1,5 +1,5 @@
-import rhs_lexer
-import rhs_parser
+import sunda_lexer
+import sunda_parser
 
 class BasicExecute:
 
@@ -98,8 +98,8 @@ class BasicExecute:
 
 
 if __name__ == '__main__':
-    lexer = rhs_lexer.BasicLexer()
-    parser = rhs_parser.BasicParser()
+    lexer = sunda_lexer.BasicLexer()
+    parser = sunda_parser.BasicParser()
     env = {}
     while True:
         try:

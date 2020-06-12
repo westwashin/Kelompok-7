@@ -1,15 +1,16 @@
 from sly import Parser
-#untuk dyrect lyblary parser import rhs_lexer
-#untuk mengambil token dari laxer
+
+import rhs_lexer
+
 class BasicParser(Parser):
     tokens = rhs_lexer.BasicLexer.tokens
-    
+
     precedence = (
         ('left', '+', '-'),
         ('left', '*', '/'),
         ('right', 'UMINUS'),
         )
-    
+
     def __init__(self):
         self.env = { }
     @_('')
@@ -71,3 +72,33 @@ class BasicParser(Parser):
     @_('"-" expr %prec UMINUS')
     def expr(self, p):
         return p.expr
+
+    @_('NAME')
+    def expr(self, p):
+        return ('var', p.NAME)
+
+    @_('NUMBER')
+    def expr(self, p):
+        return ('num', p.NUMBER)
+        
+    @_('PRINT expr')
+    def expr(self, p):
+        return ('print', p.expr)
+
+    @_('PRINT STRING')
+    def statement(self, p):
+        return ('print', p.STRING)
+
+if __name__ == '__main__':
+    lexer = rhs_lexer.BasicLexer()
+    parser = BasicParser()
+    env = {}
+    while True:
+        try:
+            text = input('rhs > ')
+        except EOFError:
+            break
+        if text:
+            tree = parser.parse(lexer.tokenize(text))
+            print(tree)
+            
